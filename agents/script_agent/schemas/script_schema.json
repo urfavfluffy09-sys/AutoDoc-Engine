@@ -1,0 +1,13 @@
+{
+  "agent": "script_agent",
+  "input": {
+    "research": {}
+  },
+  "output": {
+    "title": "",
+    "hook": "",
+    "introduction": "",
+    "sections": [],
+    "narration": ""
+  }
+}
