@@ -1,0 +1,11 @@
+{
+  "agent": "research_agent",
+  "input": {
+    "topic": ""
+  },
+  "output": {
+    "title": "",
+    "facts": [],
+    "sources": []
+  }
+}
