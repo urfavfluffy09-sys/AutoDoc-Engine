@@ -71,3 +71,25 @@ Example:
     "sources": []
   }
 }
+## Detailed Research Output Schema
+
+```json
+{
+  "agent": "research_agent",
+  "version": "1.0",
+  "research": {
+    "topic": "",
+    "overview": "",
+    "key_points": [],
+    "timeline": [],
+    "important_entities": [],
+    "sources": []
+  },
+  "metadata": {
+    "created_at": "",
+    "confidence_score": 0
+  }
+}
+
+
+
