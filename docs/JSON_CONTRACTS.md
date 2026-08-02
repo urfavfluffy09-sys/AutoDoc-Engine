@@ -104,6 +104,30 @@ When the Research Agent fails, it returns:
     "details": ""
   }
 }
+# Script Agent JSON Contract
+
+## Purpose
+
+Defines communication format for Script Agent.
+
+---
+
+## Input Format
+
+The Script Agent receives structured research data from Research Agent.
+
+Example:
+
+```json
+{
+  "agent": "research_agent",
+  "research": {
+    "topic": "History of Artificial Intelligence",
+    "overview": "",
+    "key_points": [],
+    "sources": []
+  }
+}
 
 
 
