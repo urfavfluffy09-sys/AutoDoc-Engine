@@ -90,6 +90,20 @@ Example:
     "confidence_score": 0
   }
 }
+## Error Response Format
+
+When the Research Agent fails, it returns:
+
+```json
+{
+  "agent": "research_agent",
+  "status": "error",
+  "error": {
+    "code": "RESEARCH_FAILED",
+    "message": "",
+    "details": ""
+  }
+}
 
 
 
