@@ -1,24 +1,24 @@
+import json
+import os
+
+
 class ResearchAgent:
 
     def __init__(self):
         self.name = "Research Agent"
         self.version = "1.0"
 
-    def validate_output(self, output):
 
-        required_fields = [
-            "agent",
-            "version",
-            "status",
-            "research",
-            "metadata"
-        ]
+    def load_schema(self):
 
-        for field in required_fields:
-            if field not in output:
-                return False
+        schema_path = os.path.join(
+            os.path.dirname(__file__),
+            "schemas",
+            "research_schema.json"
+        )
 
-        return True
+        with open(schema_path, "r") as file:
+            return json.load(file)
 
 
     def run(self, topic):
@@ -33,6 +33,9 @@ class ResearchAgent:
                     "details": ""
                 }
             }
+
+
+        schema = self.load_schema()
 
 
         research_output = {
@@ -53,15 +56,4 @@ class ResearchAgent:
         }
 
 
-        if self.validate_output(research_output):
-            return research_output
-
-        return {
-            "agent": self.name,
-            "status": "error",
-            "error": {
-                "code": "INVALID_OUTPUT",
-                "message": "Output validation failed",
-                "details": ""
-            }
-        }
+        return research_output
