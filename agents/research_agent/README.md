@@ -1,16 +1,31 @@
 # Research Agent
 
-## Purpose
+## Overview
 
-The Research Agent collects and structures information required for documentary generation.
+The Research Agent is responsible for collecting and structuring research information required for documentary production.
 
 ## Responsibilities
 
-- Topic research
-- Fact collection
-- Source organization
-- Information extraction
+- Accept documentary topic requests
+- Structure research data
+- Generate standardized JSON output
+- Validate research responses
 
-## Status
+## Input
 
-Development Phase
+Example:
+
+```json
+{
+  "topic": "History of Artificial Intelligence"
+}
+{
+  "agent": "Research Agent",
+  "status": "success",
+  "research": {
+    "topic": "History of Artificial Intelligence",
+    "overview": "",
+    "key_points": [],
+    "sources": []
+  }
+}
