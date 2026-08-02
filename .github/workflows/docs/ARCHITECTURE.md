@@ -33,3 +33,59 @@
 ## Quality Assurance Layer
 
 ## Output Layer
+# System Flow
+
+User Topic
+    │
+    ▼
+Research Agent
+    │
+    ▼
+Script Agent
+    │
+    ▼
+Storyboard Agent
+    │
+    ▼
+Scene JSON Engine
+    │
+    ▼
+Asset Finder Agent
+    │
+    ├──────────────┐
+    ▼              ▼
+Image Generator    Stock Video Finder
+    │              │
+    └──────┬───────┘
+           ▼
+Animation Agent
+           │
+           ▼
+Voice Agent
+           │
+           ▼
+Scene Composer
+           │
+           ▼
+Video Renderer
+           │
+           ▼
+Caption Generator
+           │
+           ▼
+Music & SFX
+           │
+           ▼
+Motion Graphics
+           │
+           ▼
+Quality Assurance
+           │
+           ▼
+Thumbnail Agent
+           │
+           ▼
+SEO Agent
+           │
+           ▼
+Upload Ready Output
