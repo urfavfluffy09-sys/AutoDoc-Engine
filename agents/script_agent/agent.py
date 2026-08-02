@@ -1,25 +1,23 @@
+import json
+import os
+
+
 class ScriptAgent:
 
     def __init__(self):
         self.name = "Script Agent"
         self.version = "1.0"
 
-    def validate_output(self, output):
+    def load_schema(self):
 
-        required_fields = [
-            "agent",
-            "version",
-            "status",
-            "script",
-            "metadata"
-        ]
+        schema_path = os.path.join(
+            os.path.dirname(__file__),
+            "schemas",
+            "script_schema.json"
+        )
 
-        for field in required_fields:
-            if field not in output:
-                return False
-
-        return True
-
+        with open(schema_path, "r") as file:
+            return json.load(file)
 
     def run(self, research):
 
@@ -34,7 +32,9 @@ class ScriptAgent:
                 }
             }
 
-        script_output = {
+        self.load_schema()
+
+        return {
             "agent": self.name,
             "version": self.version,
             "status": "success",
@@ -48,18 +48,5 @@ class ScriptAgent:
             },
             "metadata": {
                 "confidence_score": 0
-            }
-        }
-
-        if self.validate_output(script_output):
-            return script_output
-
-        return {
-            "agent": self.name,
-            "status": "error",
-            "error": {
-                "code": "INVALID_OUTPUT",
-                "message": "Output validation failed",
-                "details": ""
             }
         }
