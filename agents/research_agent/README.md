@@ -19,13 +19,3 @@ Example:
 {
   "topic": "History of Artificial Intelligence"
 }
-{
-  "agent": "Research Agent",
-  "status": "success",
-  "research": {
-    "topic": "History of Artificial Intelligence",
-    "overview": "",
-    "key_points": [],
-    "sources": []
-  }
-}
