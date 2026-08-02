@@ -30,3 +30,33 @@ Input example:
     "facts": []
   }
 }
+## Workflow
+
+The Script Agent works in the following pipeline:
+
+Research Agent
+        ↓
+Script Agent
+        ↓
+Storyboard Agent
+## Processing Flow
+
+1. Receive research data from Research Agent
+2. Analyze important facts
+3. Create documentary structure
+4. Generate narration script
+5. Prepare output for Storyboard Agent
+## Script Structure
+
+A generated script contains:
+
+- Title
+- Hook
+- Introduction
+- Main Sections
+- Narration
+- Ending / Conclusion
+
+## Status
+
+Architecture Design Completed
